@@ -16,7 +16,7 @@ st.caption("Machine Learning-based credit risk assessment system")
 # LOAD MODELS
 # ==============================
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 model_A = joblib.load(os.path.join(BASE_DIR, "models", "best_model.pkl"))
 threshold_A = joblib.load(os.path.join(BASE_DIR, "models", "threshold.pkl"))
