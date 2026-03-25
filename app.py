@@ -16,13 +16,11 @@ st.caption("Machine Learning-based credit risk assessment system")
 # LOAD MODELS
 # ==============================
 
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+model_A = joblib.load("models/best_model.pkl")
+threshold_A = joblib.load("models/threshold.pkl")
 
-model_A = joblib.load(os.path.join(BASE_DIR, "models", "best_model.pkl"))
-threshold_A = joblib.load(os.path.join(BASE_DIR, "models", "threshold.pkl"))
-
-model_B = joblib.load(os.path.join(BASE_DIR, "models", "model_no_ext.pkl"))
-threshold_B = joblib.load(os.path.join(BASE_DIR, "models", "threshold_no_ext.pkl"))
+model_B = joblib.load("models/model_no_ext.pkl")
+threshold_B = joblib.load("models/threshold_no_ext.pkl")
 
 # ==============================
 # SIDEBAR INPUTS
